@@ -1,0 +1,80 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<h2>{{ listing.title }}</h2>
+
+<p><strong>Description:</strong> {{ listing.description }}</p>
+<p><strong>Category:</strong> {{ listing.category }}</p>
+<p><strong>Current Price:</strong> {{ current_price }} Credits</p>
+
+
+{% if not listing.active %}
+    <p><strong>Status:</strong> Closed</p>
+    {% if listing.winner %}
+        {% if user == listing.winner %}
+            <p style="color: green;"><strong>🎉 You won this auction!</strong></p>
+        {% else %}
+            <p><strong>New Owner/Winner:</strong> {{ listing.winner.username }}</p>
+        {% endif %}
+    {% else %}
+        <p>No bids were placed. No winner.</p>
+    {% endif %}
+{% endif %}
+
+
+
+
+<p><strong>Owner:</strong> {{ listing.owner.username }}</p>
+{% if listing.image_url %}
+    <img src="{{ listing.image_url }}" alt="{{ listing.title }}" width="300">
+{% endif %}
+
+
+
+{% if user.is_authenticated %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ bid_form.as_p }}
+        <button type="submit" name="place_bid">Place Bid</button>
+    </form>
+
+    {% if watchlisted %}
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" name="watchlist_remove">Remove from Watchlist</button>
+        </form>
+    {% else %}
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" name="watchlist_add">Add to Watchlist</button>
+        </form>
+    {% endif %}
+
+    {% if listing.owner == user and listing.active %}
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" name="close_auction">Close Auction</button>
+        </form>
+    {% endif %}
+{% endif %}
+
+
+<hr>
+<h3>Comments</h3>
+{% for comment in comments %}
+    <div>
+        <strong>{{ comment.user.username }}</strong>: {{ comment.content }} <em>on {{ comment.posted_at }}</em>
+    </div>
+{% empty %}
+    <p>No comments yet.</p>
+{% endfor %}
+
+{% if user.is_authenticated %}
+    <h4>Add a Comment</h4>
+    <form method="POST">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button type="submit" name="add_comment">Post Comment</button>
+    </form>
+{% endif %}
+{% endblock %}
