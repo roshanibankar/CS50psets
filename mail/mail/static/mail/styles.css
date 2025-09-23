@@ -1,0 +1,8 @@
+textarea {
+    min-height: 400px;
+}
+
+/* space between emails in the list */
+.emails-list > div {
+        margin-bottom: 15px;
+      }
