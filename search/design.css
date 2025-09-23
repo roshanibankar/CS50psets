@@ -1,0 +1,36 @@
+
+.image-search-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 120px;
+}
+
+.nav-color {
+    color: black;
+}
+
+
+
+.search-bar-responsive {
+    text-align: left;
+    border-radius: 60px;
+    padding: 14px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .search-bar-responsive {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar-responsive {
+        width: 80%;
+    }
+}
