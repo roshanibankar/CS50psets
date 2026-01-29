@@ -4,7 +4,7 @@
 - Commerce
 - Mail
 - Network
-- Final Project
+- Final Project [https://github.com/roshanibankar/STEM-HR]
 
 # CS50 AI
 - 
