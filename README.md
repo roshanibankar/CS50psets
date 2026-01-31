@@ -10,9 +10,6 @@
 - Degrees
 - Tic Tac Toe
 
-# CS50 SQL
-- 
-
 # CS50 Python
 - Pset0 (Tip, Einstein, Faces, Playback, Indoor)
 - Pset1 (Meal, Interpreter, Extensions, Bank, Deep)
