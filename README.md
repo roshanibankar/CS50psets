@@ -25,5 +25,5 @@
 - Pset8 (Shirtificate, Seasons, Jar)
 Final Project (Louvre Museum Web Scrapping for Artworks and location)
 
-<Check for the paths in each file before execution.>
+`P.S Check for the paths in each file before execution.`
 
