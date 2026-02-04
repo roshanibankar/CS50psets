@@ -7,15 +7,30 @@
 - Final Project [https://github.com/roshanibankar/STEM-HR]
 
 # CS50 AI
-- Degrees
-- Tic Tac Toe
-- Traffic
-- Minesweepper
-- Heredity
-- Parser
-- Attention
-- Crossword
-- Nim
+## Search & Optimization
+- **degrees**: Graph search to find the shortest path between actors (BFS)
+- **tictactoe**: Adversarial search using Minimax for optimal play
+
+## Knowledge & Logic
+- **knights**: Propositional logic and model checking to solve logic puzzles
+- **minesweeper**: Logical inference with a knowledge base to identify mines and safe cells
+
+## Uncertainty & Probability
+- **heredity**: Bayesian inference to compute gene and trait probabilities
+- **pagerank**: Probabilistic modeling of a random surfer to rank pages
+
+## Learning
+- **nim**: Reinforcement learning using Q-learning and self-play
+- **shopping**: Supervised learning to predict purchasing behavior
+- **traffic**: Deep learning (CNNs) for traffic sign image classification
+
+## Language
+- **parser**: Context-free grammars for sentence parsing
+- **attention**: Attention mechanisms to focus on relevant parts of language input
+
+## Constraint Satisfaction
+- **crossword**: Constraint satisfaction with backtracking and heuristics
+
 
 # CS50 Python
 - Pset0 (Tip, Einstein, Faces, Playback, Indoor)
