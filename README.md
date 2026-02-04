@@ -9,6 +9,13 @@
 # CS50 AI
 - Degrees
 - Tic Tac Toe
+- Traffic
+- Minesweepper
+- Heredity
+- Parser
+- Attention
+- Crossword
+- Nim
 
 # CS50 Python
 - Pset0 (Tip, Einstein, Faces, Playback, Indoor)
