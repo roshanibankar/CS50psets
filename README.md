@@ -4,7 +4,7 @@
 - Commerce
 - Mail
 - Network
-- Final Project [https://github.com/roshanibankar/STEM-HR]
+- Final Project [Lourvre Museum Scrapper & personalized viewer]
 
 # CS50 AI
 ## Search & Optimization
