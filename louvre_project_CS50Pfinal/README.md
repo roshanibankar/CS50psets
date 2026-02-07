@@ -1,5 +1,4 @@
 # Louvre Collection Scraper and Browser
-#### Video Demo: https://youtu.be/bvTzkyMDb1I 
 #### Description:
 
 The **Louvre Collection Scraper and Browser** is a full-stack Python application designed to archive and visualize digitized artwork data from the Louvre Museum's public API. This project was born out of a desire to create a local, searchable interface for art history research, allowing users to browse thousands of items without relying on the museum's external web interface once the data is cached.
