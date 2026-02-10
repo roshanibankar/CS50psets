@@ -4,7 +4,7 @@
 - Commerce
 - Mail
 - Network
-- Final Project [Lourvre Museum Scrapper & personalized viewer]
+- Final Project [A web server for recruiting STEM services)
 
 # CS50 AI
 ## Search & Optimization
