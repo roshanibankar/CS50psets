@@ -1,0 +1,90 @@
+{% extends 'HRservices/layout.html' %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .job-list-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .job-count {
+        text-align: center;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .job-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        background-color: #fafafa;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .job-card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .job-title {
+        color: #2c3e50;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .job-meta {
+        color: #555;
+        font-size: 0.95rem;
+        margin: 5px 0 10px;
+    }
+
+    .job-description {
+        color: #444;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .no-jobs {
+        text-align: center;
+        font-style: italic;
+        color: #888;
+    }
+</style>
+
+<div class="job-list-container">
+    <h1>Available Job Openings</h1>
+    <p class="job-count">Total jobs: {{ jobs|length }}</p>
+
+    {% for job in jobs %}
+        <div class="job-card">
+            <h2 class="job-title">{{ job.title }}</h2>
+            <p class="job-meta"><strong>Location:</strong> {{ job.location }}</p>
+            <p class="job-description">{{ job.description }}</p>
+            <p class="job-meta"><em>Posted on: {{ job.posted_on }}</em></p>
+            <a href="{% url 'job_apply' job.id %}"  class="apply-button">Apply Now</a>
+
+        
+        </div>
+    {% empty %}
+        <p class="no-jobs">No jobs available right now.</p>
+    {% endfor %}
+</div>
+{% endblock %}

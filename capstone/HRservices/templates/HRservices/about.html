@@ -1,0 +1,50 @@
+{% extends 'HRservices/layout.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+.contact-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 40px 32px 40px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contact-container h2 {
+    color: #2d3a4b;
+    margin-bottom: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+</style>
+
+<div class="contact-container">
+
+    <h2>Our Story</h2>
+    <img src="{% static 'HRservices/media/aboutus.jpg' %}" alt="Mia Conrads" style="width:100%; border-radius:8px; margin-bottom:20px;">
+    
+    <p>
+        STEM HR Services began with one woman’s vision and a simple belief that great people deserve to be discovered.
+        Our founder, <strong>Mia Conrads</strong>, started her career as an engineer in a competitive, male-dominated industry. Despite her qualifications, she faced countless closed doors, underestimated not because of her ability, but because of how the system overlooked true potential.
+    </p>
+
+    <p>
+        After years of navigating the STEM world, she realized that the issue wasn't a lack of talent it was a gap in how companies searched for it. Mia decided to change that.
+        She left her corporate role and poured her savings, heart, and sleepless nights into building a platform that didn’t just fill positions it opened doors.
+    </p>
+    
+    <img src="{% static 'HRservices/media/team.jpg' %}" alt="Our Team" style="width:100%; border-radius:8px; margin: 24px 0 20px 0;">
+
+    <p>
+        What started at her kitchen table with a notebook and a borrowed laptop is now a growing team committed to connecting diverse STEM professionals with companies who value them.
+        Today, STEM HR Services has helped hundreds of job seekers find their purpose and helped companies build teams that innovate with integrity.
+    </p>
+
+    <p>
+        Our mission remains simple: <em>Champion people. Match passion with opportunity. </em>
+    </p>
+</div>
+
+{% endblock %}
